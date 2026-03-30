@@ -4,51 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sticker Portfolio 💖</title>
-<section class="hero">
-  <img src="everyprint aw-08.png" alt=>
-  <div class="overlay-text">
-  </div>
-</section>
+
 <style>
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #ffd1dc, #ffe4b5);
 }
-.hero {
-  position: relative;
-  width: 100%;
-}
 
+/* HERO */
 .hero img {
   width: 100%;
-  border-radius: 20px;
 }
 
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: pink;
-  font-size: 40px;
-  font-weight: bold;
-}
+/* HEADER */
 .header {
     text-align: center;
     padding: 40px 20px;
     color: #584c4c;
 }
 
-.header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.header p {
-    color: #ff7a7a;
-}
-
+/* GALLERY */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -71,14 +47,17 @@ body {
 .card img {
     width: 100%;
     border-radius: 20px;
+    cursor: pointer;
 }
 
+/* TITLE */
 .title {
     margin-top: 10px;
     color: #ff4d88;
     font-weight: bold;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     margin: 30px auto;
@@ -90,107 +69,138 @@ body {
     font-weight: bold;
 }
 
-.btn:hover {
-    opacity: 0.8;
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+.modal img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 20px;
+}
+
+/* CLOSE */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
+<section class="hero">
+  <img src="everyprint aw-08.png" alt="Sticker Portfolio">
+</section>
+
+<!-- HEADER -->
 <div class="header">
     <h1>💖 Sticker Portfolio 💖</h1>
     <p>ผลงานสติ๊กเกอร์ ✨</p>
 </div>
 
+<!-- GALLERY -->
 <div class="gallery">
 
-    <div class="card">
-        <img src="mock up-wine-11.png">
-        <div class="title">Wine Label Mockup 🍷</div>
-    </div>
+    <!-- ใส่ class clickable -->
+    <div class="card"><img src="mock up-wine-11.png" class="clickable"></div>
+    <div class="card"><img src="post1.png" class="clickable"></div>
+    <div class="card"><img src="post2.png" class="clickable"></div>
+    <div class="card"><img src="post3.png" class="clickable"></div>
+    <div class="card"><img src="post5.png" class="clickable"></div>
+    <div class="card"><img src="post6.png" class="clickable"></div>
 
-    <div class="card">
-        <img src="post1.png">
-        <div class="title">Cute Branding Post #1 💖</div>
-    </div>
+    <div class="card"><img src="stk roll.png" class="clickable"></div>
+    <div class="card"><img src="stk-roll- Maruy-12.png" class="clickable"></div>
+    <div class="card"><img src="stk-roll- Wine-14.png" class="clickable"></div>
+    <div class="card"><img src="stk-roll- Wine-15.png" class="clickable"></div>
+    <div class="card"><img src="stk-roll1.png" class="clickable"></div>
+    <div class="card"><img src="stk-roll2.png" class="clickable"></div>
 
-    <div class="card">
-        <img src="post2.png">
-        <div class="title">Sweet Promotion Design #2 🌸</div>
-    </div>
-
-    <div class="card">
-        <img src="post3.png">
-        <div class="title">Minimal Pink Post #3 ✨</div>
-    </div>
-
-    <div class="card">
-        <img src="post5.png">
-        <div class="title">Luxury Product Post #5 💎</div>
-    </div>
-
-    <div class="card">
-        <img src="post6.png">
-        <div class="title">Soft Aesthetic Post #6 🎀</div>
-    </div>
-
-    <div class="card">
-        <img src="stk roll.png">
-        <div class="title">Classic Sticker Roll 🎀</div>
-    </div>
-
-    <div class="card">
-        <img src="stk-roll- Maruy-12.png">
-        <div class="title">Maruy Cute Roll 🌷</div>
-    </div>
-
-    <div class="card">
-        <img src="stk-roll- Wine-14.png">
-        <div class="title">Wine Theme Roll 🍷</div>
-    </div>
-
-    <div class="card">
-        <img src="stk-roll- Wine-15.png">
-        <div class="title">Premium Wine Roll ✨</div>
-    </div>
-
-    <div class="card">
-        <img src="stk-roll1.png">
-        <div class="title">Pink Label Roll #1 💕</div>
-    </div>
-
-    <div class="card">
-        <img src="stk-roll2.png">
-        <div class="title">Sweet Label Roll #2 🍑</div>
-    </div>
-
-    <div class="card">
-        <img src="STK-ฝ้า.png">
-        <div class="title">Custom Label Sticker 💖</div>
-    </div>
-
-    <div class="card">
-        <img src="กระดาษไขรองขนม-02.png">
-        <div class="title">Bakery Wax Paper 🍪</div>
-    </div>
-
-    <div class="card">
-        <img src="สายคาดกล่อง.png">
-        <div class="title">Box Band Sticker 🎁</div>
-    </div>
-
-    <div class="card">
-        <img src="สายคาดแก้ว.png">
-        <div class="title">Cup Sleeve Sticker 🥤</div>
-    </div>
+    <div class="card"><img src="STK-ฝ้า.png" class="clickable"></div>
+    <div class="card"><img src="กระดาษไขรองขนม-02.png" class="clickable"></div>
+    <div class="card"><img src="สายคาดกล่อง.png" class="clickable"></div>
+    <div class="card"><img src="สายคาดแก้ว.png" class="clickable"></div>
 
 </div>
 
+<!-- BUTTON -->
 <div style="text-align:center;">
 <a href="https://lin.ee/6UQyiKW" target="_blank" class="btn">
 💖 แอดไลน์สั่งงานเลย
 </a>
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <span class="nav prev" onclick="changeSlide(-1)">❮</span>
+  <img id="modal-img">
+  <span class="nav next" onclick="changeSlide(1)">❯</span>
+</div>
+
+<!-- SCRIPT -->
+<script>
+let images = [];
+let currentIndex = 0;
+
+// ดึงรูปทั้งหมดอัตโนมัติ
+document.querySelectorAll(".clickable").forEach((img, index) => {
+    images.push(img.src);
+
+    img.addEventListener("click", () => {
+        openModal(index);
+    });
+});
+
+function openModal(index) {
+  currentIndex = index;
+  document.getElementById("modal").style.display = "flex";
+  document.getElementById("modal-img").src = images[currentIndex];
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+
+function changeSlide(step) {
+  currentIndex += step;
+
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+
+  document.getElementById("modal-img").src = images[currentIndex];
+}
+</script>
 
 </body>
 </html>
